@@ -66,7 +66,8 @@
     <Compile Include="Entities\Plate.cs" />
     <Compile Include="Entities\Publisher.cs" />
     <Compile Include="Entities\Track.cs" />
-    <Compile Include="EF\MusicShop.cs" />
+    <Compile Include="EF\MusicShopDBContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

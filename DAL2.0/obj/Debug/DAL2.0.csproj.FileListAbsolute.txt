@@ -1,0 +1,16 @@
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\bin\Debug\DAL2.0.dll.config
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\bin\Debug\DAL2.0.dll
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\bin\Debug\DAL2.0.pdb
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\bin\Debug\EntityFramework.dll
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\bin\Debug\EntityFramework.xml
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2.0.csprojAssemblyReference.cache
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2.0.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2.0.csproj.CopyComplete
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2.0.dll
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2.0.pdb
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2._0.Migrations.InitialCreate.resources
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2.0.csproj.GenerateResource.cache
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2._0.Migrations.AddPlatesCollectionToAccount.resources
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2._0.Migrations.AddReservationAndDiscount.resources

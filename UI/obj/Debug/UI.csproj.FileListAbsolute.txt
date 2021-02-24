@@ -1,0 +1,15 @@
+C:\Users\Администратор\source\repos\MusicShop\UI\bin\Debug\UI.exe.config
+C:\Users\Администратор\source\repos\MusicShop\UI\bin\Debug\UI.exe
+C:\Users\Администратор\source\repos\MusicShop\UI\bin\Debug\UI.pdb
+C:\Users\Администратор\source\repos\MusicShop\UI\bin\Debug\DAL2.0.dll
+C:\Users\Администратор\source\repos\MusicShop\UI\bin\Debug\EntityFramework.dll
+C:\Users\Администратор\source\repos\MusicShop\UI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Администратор\source\repos\MusicShop\UI\bin\Debug\DAL2.0.pdb
+C:\Users\Администратор\source\repos\MusicShop\UI\bin\Debug\DAL2.0.dll.config
+C:\Users\Администратор\source\repos\MusicShop\UI\bin\Debug\EntityFramework.xml
+C:\Users\Администратор\source\repos\MusicShop\UI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Администратор\source\repos\MusicShop\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Администратор\source\repos\MusicShop\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\source\repos\MusicShop\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\Администратор\source\repos\MusicShop\UI\obj\Debug\UI.exe
+C:\Users\Администратор\source\repos\MusicShop\UI\obj\Debug\UI.pdb
