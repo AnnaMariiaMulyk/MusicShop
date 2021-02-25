@@ -73,6 +73,9 @@ namespace DAL2._0.EF
         public virtual DbSet<Plate> Plates { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
         public virtual DbSet<Track> Tracks { get; set; }
+        public virtual DbSet<Discount> Discounts { get; set; }
+        public virtual DbSet<Reservation> Reservations { get; set; }
+        
 
     }
 
