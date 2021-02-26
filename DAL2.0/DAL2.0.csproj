@@ -81,6 +81,14 @@
     <Compile Include="Migrations\202102242245548_AddReservationAndDiscount.designer.cs">
       <DependentUpon>202102242245548_AddReservationAndDiscount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102260059576_NewMigration.cs" />
+    <Compile Include="Migrations\202102260059576_NewMigration.designer.cs">
+      <DependentUpon>202102260059576_NewMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102260124231_AddAccountToPlate.cs" />
+    <Compile Include="Migrations\202102260124231_AddAccountToPlate.designer.cs">
+      <DependentUpon>202102260124231_AddAccountToPlate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -97,6 +105,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102242245548_AddReservationAndDiscount.resx">
       <DependentUpon>202102242245548_AddReservationAndDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102260059576_NewMigration.resx">
+      <DependentUpon>202102260059576_NewMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102260124231_AddAccountToPlate.resx">
+      <DependentUpon>202102260124231_AddAccountToPlate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

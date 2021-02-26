@@ -16,7 +16,7 @@ namespace DAL2._0.Configurations
                 .HasKey(a => a.Id);
             this.Property(a => a.Login)
                 .HasMaxLength(100)
-                .IsRequired();
+                .IsRequired();            
             this.Property(a => a.Password)
                 .HasMaxLength(100)
                 .IsRequired();

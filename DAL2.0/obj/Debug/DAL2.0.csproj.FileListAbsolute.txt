@@ -14,3 +14,5 @@ C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2
 C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2.0.csproj.GenerateResource.cache
 C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2._0.Migrations.AddPlatesCollectionToAccount.resources
 C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2._0.Migrations.AddReservationAndDiscount.resources
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2._0.Migrations.NewMigration.resources
+C:\Users\Администратор\source\repos\MusicShop\DAL2.0\obj\Debug\DAL2._0.Migrations.AddAccountToPlate.resources

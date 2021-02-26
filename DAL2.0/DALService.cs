@@ -3,6 +3,7 @@ using DAL2._0.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,6 +27,18 @@ namespace DAL2._0
         public IQueryable<Artist>GetAllArtists()
         {
             return _context.Artists;
+        }
+        public Account GetAccount(string login, string password)
+        {
+            var account = new Account();
+            foreach(var a in _context.Accounts)
+            {
+                if (a.Login==login && ComputeSha256Hash(password) == a.Password)
+                {
+                    account = _context.Accounts.Find(a.Id);
+                }
+            }
+            return account;
         }
         public void AddAccount(Account account)
         {
@@ -86,6 +99,15 @@ namespace DAL2._0
         {
             _context.Plates.Add(plate);
         }
+        public void RemovePlate(int plateId)
+        {
+            var plate = _context.Plates.Find(plateId);
+            if (plate == null) { return; }
+            
+                _context.Plates.Remove(plate);
+                _context.SaveChanges();
+            
+        }
         public void AddPublisher(Publisher publisher)
         {
             _context.Publishers.Add(publisher);
@@ -138,36 +160,112 @@ namespace DAL2._0
         public void DeletePlate(int plateId)
         {
             var plate = _context.Plates.Find(plateId);
-            if(plate!=null)
-            {
+            if (plate == null) { return; }
+            
                 _context.Plates.Remove(plate);
                 _context.SaveChanges();
-            }
+            
         }
         public void ChangePlateSalePrice(decimal newPrice, int plateId)
         {
             var plate = _context.Plates.Find(plateId);
+            if (plate == null) { return; }
+
             plate.SalePrice = newPrice;
             _context.SaveChanges();
         }
         public void ChangeCoastPrice(decimal newPrice, int plateId)
         {
             var plate = _context.Plates.Find(plateId);
+            if (plate == null) { return; }
             plate.SalePrice = newPrice;
             _context.SaveChanges();
         }
-        public IQueryable FindPlateByName(string name)
+        public void ChangePlateName(string name, int plateId)
+        {
+            var plate = _context.Plates.Find(plateId);
+            if (plate == null) { return; }
+            plate.Name = name;
+            _context.SaveChanges();
+        }
+        public void SellPlate(int plateId, int accountId)
+        {
+            var plate = _context.Plates.Find(plateId);
+            if (plate == null) { return; }
+            var account = _context.Accounts.Find(accountId);
+            if (account == null) { return; }
+            if(account.MoneyBalance>=plate.SalePrice)
+            {
+                account.MoneyBalance -= plate.SalePrice;
+                account.AmountOfPurchases += plate.SalePrice;
+                account.Plates.Add(plate);
+                _context.Plates.Remove(plate);
+                Console.WriteLine("Plate succesfuly bought!");
+            }
+            else
+                Console.WriteLine("You don`t have enought money to buy the plate");
+           // _context.SaveChanges();
+        }
+        public void AddMoneyToAccount(int accountId, decimal moneyAdd)
+        {
+            var account = _context.Accounts.Find(accountId);
+            if (account == null) { return; }
+            account.MoneyBalance += moneyAdd;
+            _context.SaveChanges();
+        }
+        public void ChangePassword(int accountId, string newPasswd)
+        {
+            var account = _context.Accounts.Find(accountId);
+            if (account == null) { return; }
+            account.Password = ComputeSha256Hash(newPasswd);
+            _context.SaveChanges();
+        }
+        public void ChangeLogin(int accountId, string newLogin)
+        {
+            var account = _context.Accounts.Find(accountId);
+            if (account == null) { return; }
+            foreach (var a in _context.Accounts)
+            {
+                if (a.Login == newLogin)
+                {
+                    Console.WriteLine("Account with this login is already exist");
+                    Console.ReadKey();
+                    return;
+                }
+            }
+            account.Login = newLogin;
+            Console.WriteLine("Account login succesfuly changed");
+            _context.SaveChanges();
+        }
+
+        public IQueryable<Plate> FindPlateByName(string name)
         {
             return _context.Plates.Where(p => p.Name == name);
         }
-        public IQueryable FindPlateByGenre(string genre)
+        public IQueryable<Plate> FindPlateByGenre(string genre)
         {
             return _context.Plates.Where(p => p.Genre.Name == genre);
         }
-        public IQueryable FindPlateByBand(string band)
+        public IQueryable<Plate> FindPlateByBand(string band)
         {
             return _context.Plates.Where(p => p.Band.Name == band);
         }
+        static string ComputeSha256Hash(string rawData)
+        {
+            // Create a SHA256   
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // ComputeHash - returns byte array  
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
 
+                // Convert byte array to a string   
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
     }
 }

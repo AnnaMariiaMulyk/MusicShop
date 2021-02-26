@@ -40,6 +40,10 @@ namespace DAL2._0.Configurations
 
             this.HasOptional(p => p.Reservation)
                 .WithRequired(r => r.Plate);
+
+            this.HasOptional(p => p.Account)
+                .WithMany(a => a.Plates)
+                .WillCascadeOnDelete(false);
         }
     }
 }

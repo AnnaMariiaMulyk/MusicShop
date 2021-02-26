@@ -57,7 +57,6 @@ namespace DAL2._0.EF
             modelBuilder.Entity<Discount>().Property(d => d.DiscountAmount).IsRequired();
             modelBuilder.Entity<Discount>().HasKey(d => d.Id);
             modelBuilder.Entity<Reservation>().HasKey(r => r.Id);
-            
 
             modelBuilder.Entity<Account>().HasOptional(a=>a.Plates);
             modelBuilder.Configurations.Add(new BandConfig());

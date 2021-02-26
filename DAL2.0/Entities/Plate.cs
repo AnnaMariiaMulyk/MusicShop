@@ -22,7 +22,8 @@ namespace DAL2._0.Entities
         public int BandId { get; set; }
         public int PublisherId { get; set; }
         public int GenreId { get; set; }
-
+        public int? AccountId { get; set; }
+        public virtual Account Account { get; set; }
         public virtual Reservation Reservation { get; set; }
         public virtual Band Band { get; set; }
         public virtual Publisher Publisher { get; set; }
